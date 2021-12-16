@@ -9,12 +9,17 @@
   <strong>Number of pages:</strong>
   <%= @book.number_of_pages %>
 </p>
+ <div class="card-body">
+  <strong>Detail:</strong>
+  <span class="card-text"><%= @book.detail %></span>
+</div>
 
 <p>
+  <strong>Images:</strong>
   <% if @book.image.attached? %>
-    <%= image_tag @book.image %>
+     <%= image_tag @book.image %>
   <% end %>
 </p>
 
 <%= link_to 'Edit', edit_book_path(@book) %> |
-<%= link_to 'Back', books_path %>
+<%= link_to 'Back', books_path %> 
